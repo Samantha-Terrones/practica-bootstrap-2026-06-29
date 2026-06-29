@@ -25,14 +25,25 @@
                 <div class="card shadow">
                     <div class="card-body p-4">
                         <h3 class="card-title text-center mb-4">Iniciar Sesión</h3>
-                        <form action="dashboard.html" method="POST">
+                        <form action="dashboard.html" method="get" >
                             <div class="mb-3">
                                 <label class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" required>
+                                <input type="email" class="form-control" id="validationServerUsername"
+                                    aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+
+                                <div id="validationServerEmailFeedback" class="invalid-feedback">
+                                    Porfavor ingresa un correo válido.
+                                </div>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" required>
+                                 <input type="password" class="form-control" id="validationServerUsername"
+                                    aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+
+                                <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                                    Porfavor ingresa una contraseña válida.
+                                </div>
+                            </div>
                             </div>
                             <button type="submit" class="btn btn-primary w-100 mt-2">Ingresar</button>
                         </form>
@@ -41,6 +52,8 @@
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
+
 
 </html>

@@ -22,7 +22,7 @@
         <div class="container-fluid">
             <span class="navbar-brand">Mi Progreso</span>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link btn btn-outline-danger btn-sm text-white px-3" href="login.html">Cerrar Sesión</a>
+                <a class="nav-link btn btn-outline-danger btn-sm text-white px-3" href="index.html">Cerrar Sesión</a>
             </div>
         </div>
     </nav>
@@ -65,6 +65,35 @@
                     </table>
                 </div>
             </div>
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script>
+                const ctx = document.getElementById('myChart');
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Samantha', 'Neri', 'Mateo'],
+                        datasets: [{
+                            label: 'kg',
+                            data: [50, 50, 74],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
+
         </div>
     </div>
 </body>
